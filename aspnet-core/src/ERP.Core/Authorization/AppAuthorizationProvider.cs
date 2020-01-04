@@ -29,6 +29,13 @@ namespace ERP.Authorization
             //COMMON PERMISSIONS (FOR BOTH OF TENANTS AND HOST)
 
             var pages = context.GetPermissionOrNull(AppPermissions.Pages) ?? context.CreatePermission(AppPermissions.Pages, L("Pages"));
+
+            var catExpenses = pages.CreateChildPermission(AppPermissions.Pages_CatExpenses, L("CatExpenses"), multiTenancySides: MultiTenancySides.Tenant);
+            catExpenses.CreateChildPermission(AppPermissions.Pages_CatExpenses_Create, L("CreateNewCatExpense"), multiTenancySides: MultiTenancySides.Tenant);
+            catExpenses.CreateChildPermission(AppPermissions.Pages_CatExpenses_Edit, L("EditCatExpense"), multiTenancySides: MultiTenancySides.Tenant);
+            catExpenses.CreateChildPermission(AppPermissions.Pages_CatExpenses_Delete, L("DeleteCatExpense"), multiTenancySides: MultiTenancySides.Tenant);
+
+
             pages.CreateChildPermission(AppPermissions.Pages_DemoUiComponents, L("DemoUiComponents"));
 
             var administration = pages.CreateChildPermission(AppPermissions.Pages_Administration, L("Administration"));

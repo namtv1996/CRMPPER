@@ -1,3 +1,5 @@
+﻿using ERP.Categories.Dtos;
+using ERP.Categories;
 using Abp.Application.Editions;
 using Abp.Application.Features;
 using Abp.Auditing;
@@ -41,6 +43,8 @@ namespace ERP
     {
         public static void CreateMappings(IMapperConfigurationExpression configuration)
         {
+            configuration.CreateMap<CreateOrEditCatExpenseDto, CatExpense>().ReverseMap();
+            configuration.CreateMap<CatExpenseDto, CatExpense>().ReverseMap();
             //Inputs
             configuration.CreateMap<CheckboxInputType, FeatureInputTypeDto>();
             configuration.CreateMap<SingleLineStringInputType, FeatureInputTypeDto>();

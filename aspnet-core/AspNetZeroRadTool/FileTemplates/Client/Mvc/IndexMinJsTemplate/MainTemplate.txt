@@ -79,7 +79,6 @@
             ]
         });
 
-
         function get{{Entity_Name_Plural_Here}}() {
             dataTable.ajax.reload();
         }
@@ -87,6 +86,7 @@
         function delete{{Entity_Name_Here}}({{entity_Name_Here}}) {
             abp.message.confirm(
                 '',
+                app.localize('AreYouSure'),
                 function (isConfirmed) {
                     if (isConfirmed) {
                         _{{entity_Name_Plural_Here}}Service.delete({
@@ -132,6 +132,5 @@
 			get{{Entity_Name_Plural_Here}}();
 		  }
 		});
-
     });
 })();
