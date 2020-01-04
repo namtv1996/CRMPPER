@@ -912,5 +912,12 @@
     <text name="EnterTenancyName">Enter tenancy name...</text>
     <text name="SwitchToTheTenant">Switch to the tenant</text>
     <text name="SwitchToTheHost">Switch to the host</text>
+    
+    <!--custom-->
+
+    <text name="ManagementCategory">Management category</text>
+    <text name="CategoryExpenseList">Category expense list</text>
+    <text name="CategoryType">Category type</text>
+    <text name="CreateNew">Create new</text>
   </texts>
 </localizationDictionary>

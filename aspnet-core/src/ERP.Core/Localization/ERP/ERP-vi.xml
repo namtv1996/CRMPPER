@@ -784,5 +784,13 @@
     <text name="Green">Màu lục</text>
     <text name="Pink">Màu hồng</text>
     <text name="Yellow">Màu vàng</text>
+  
+    <!--//custom-->
+    <text name="Details">Chi tiết</text>
+    <text name="ManagementCategory">Quản lý danh mục</text>
+    <text name="CategoryExpenseList">Danh sách danh mục chi tiêu</text>
+    <text name="CategoryType">Loại chi tiêu</text>
+    <text name="CreateNew">Tạo mới</text>
+
   </texts>
 </localizationDictionary>

@@ -4,18 +4,14 @@
       
         <div class="kt-subheader__main">
             <h3 class="kt-subheader__title">
-                <span>{{l("CatExpenses")}}</span>
+                <span>{{l("CategoryExpenseList")}}</span>
             </h3>
-            <span class="kt-subheader__separator kt-subheader__separator--v"></span>
-            <span class="kt-subheader__desc">
-                {{l("CatExpensesHeaderInfo")}}
-            </span>
         </div>
         <div class="kt-subheader__toolbar">
             <div class="kt-subheader__wrapper">
 				<button (click)="exportToExcel()" class="btn btn-outline-success"><i class="fa fa-file-excel"></i> {{l("ExportToExcel")}}</button>
                 <button *ngIf="isGranted('Pages.CatExpenses.Create')" (click)="createCatExpense()" 
-			class="btn btn-primary blue"><i class="fa fa-plus"></i> {{l("CreateNewCatExpense")}}</button>
+			class="btn btn-primary blue"><i class="fa fa-plus"></i> {{l("CreateNew")}}</button>
             </div>
         </div>
       
@@ -35,20 +31,6 @@
                                         </span>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-						 <div class="row" [hidden]="!advancedFiltersAreShown">
-						 	<div class="col-md-12">
-						         <div class="kt-separator kt-separator--border-dashed"></div>
-						     </div>
-
-
-
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-sm-12">
-                                <span class="clickable-item text-muted" *ngIf="!advancedFiltersAreShown" (click)="advancedFiltersAreShown=!advancedFiltersAreShown"><i class="fa fa-angle-down"></i> {{l("ShowAdvancedFilters")}}</span>
-                                <span class="clickable-item text-muted" *ngIf="advancedFiltersAreShown" (click)="advancedFiltersAreShown=!advancedFiltersAreShown"><i class="fa fa-angle-up"></i> {{l("HideAdvancedFilters")}}</span>
                             </div>
                         </div>
                     </div>
